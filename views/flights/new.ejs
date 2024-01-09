@@ -1,10 +1,22 @@
 <%- include('../partials/header') %>
   <form action="/flights" method="POST">
     <label>Airline:
-      <input type="text" name="airline">
+      <select name="airline">
+        <option value="Alaska" selected>Alaska</option>
+        <option value="American">American</option>
+        <option value="Delta">Delta</option>
+        <option value="United">United</option>
+      </select>
     </label><br>
     <label>Airport:
-      <input type="text" name="airport">
+      <select name="airport">
+        <option value="DEN">DEN</option>
+        <option value="DFW">DFW</option>
+        <option value="JFK">JFK</option>
+        <option value="LAX">LAX</option>
+        <option value="SEA" selected>SEA</option>
+        <option value="SFO">SFO</option>
+      </select>
     </label><br>
     <label>Flight Number:
       <input type="text" name="flightNo" value="">

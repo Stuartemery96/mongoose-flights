@@ -1,8 +1,27 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: black;
+  color: lightgray;
 }
 
 a {
   color: #00B7FF;
+}
+
+th {
+  padding-right: 50px;
+}
+
+button {
+  border-radius: .5rem;
+  background-color: darkgray;
+}
+
+select {
+  border-radius: .5rem;
+}
+
+input {
+  border-radius: .5rem;
 }

@@ -10,19 +10,19 @@
     </thead>
     <tbody>
       <% flights.forEach(function(f) { %>
-        <tr>
-          <td>
-            <%= f.airline %>
-          </td>
-          <td>
-            <%= f.airport %>
-          </td>
-          <td>
-            <%= f.flightNo %>
-          </td>
-          <td>
-            <%= f.departs.toLocaleString() %>
-          </td>
+        <tr <% if (f.departs < new Date()) {%> style="color: red" <% } %>>
+            <td>
+              <%= f.airline %>
+            </td>
+            <td>
+              <%= f.airport %>
+            </td>
+            <td>
+              <%= f.flightNo %>
+            </td>
+            <td>
+              <%= f.departs.toLocaleString() %>
+            </td>
         </tr>
         <% }); %>
     </tbody>
