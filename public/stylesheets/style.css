@@ -1,12 +1,16 @@
 body {
   padding: 50px;
   font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: black;
-  color: lightgray;
+  background-color: #353535;
+  color: #FFFFFF;
 }
 
 *:hover {
   cursor: default;
+}
+
+th {
+  background-color: #2A2A2A;
 }
 
 a {
@@ -23,7 +27,8 @@ th {
 
 button {
   border-radius: .5rem;
-  background-color: darkgray;
+  background-color: #2A2A2A;
+  color: #FFFFFF;
 }
 
 button:hover {
