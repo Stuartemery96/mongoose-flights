@@ -21,7 +21,8 @@
               <%= f.flightNo %>
             </td>
             <td>
-              <%= f.departs.toLocaleString() %>
+              <%= f.departs.toLocaleDateString() %>
+                <%= f.departs.toLocaleTimeString().replace(':00', '' ) %>
             </td>
         </tr>
         <% }); %>

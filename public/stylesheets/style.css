@@ -5,8 +5,16 @@ body {
   color: lightgray;
 }
 
+*:hover {
+  cursor: default;
+}
+
 a {
   color: #00B7FF;
+}
+
+a:hover {
+  cursor: pointer;
 }
 
 th {
@@ -18,10 +26,25 @@ button {
   background-color: darkgray;
 }
 
+button:hover {
+  background-color: green;
+  height: 1.5rem;
+  width: 5rem;
+  cursor: pointer;
+}
+
 select {
   border-radius: .5rem;
 }
 
+select:hover {
+  cursor: pointer;
+}
+
 input {
   border-radius: .5rem;
+}
+
+input:hover {
+  cursor: pointer;
 }

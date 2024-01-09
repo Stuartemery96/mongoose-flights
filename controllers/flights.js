@@ -8,7 +8,8 @@ module.exports = {
 
 async function index(req, res) {
   const flights = await Flight.find({});
-  res.render('flights/index', { title: 'Flight List', flights });
+  const sortedFlights = flights.sort((a, b) => new Date(a.departs) - new Date(b.departs));
+  res.render('flights/index', { title: 'Flight List', flights: sortedFlights });
 }
 
 function newFlight(req, res) {
