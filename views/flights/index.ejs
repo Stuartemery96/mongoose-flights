@@ -24,6 +24,9 @@
               <%= f.departs.toLocaleDateString() %>
                 <%= f.departs.toLocaleTimeString().replace(':00', '' ) %>
             </td>
+            <td>
+              <a href="/flights/<%= f._id %>">Flight Details</a>
+            </td>
         </tr>
         <% }); %>
     </tbody>

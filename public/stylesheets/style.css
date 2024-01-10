@@ -11,6 +11,7 @@ body {
 
 th {
   background-color: #2A2A2A;
+  padding-right: 50px;
 }
 
 a {
@@ -18,23 +19,6 @@ a {
 }
 
 a:hover {
-  cursor: pointer;
-}
-
-th {
-  padding-right: 50px;
-}
-
-button {
-  border-radius: .5rem;
-  background-color: #2A2A2A;
-  color: #FFFFFF;
-}
-
-button:hover {
-  background-color: green;
-  height: 1.5rem;
-  width: 5rem;
   cursor: pointer;
 }
 
@@ -52,4 +36,62 @@ input {
 
 input:hover {
   cursor: pointer;
+}
+
+#new-form {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(2, minmax(auto, 22rem));
+}
+
+#new-form * {
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#new-form select {
+  margin-left: auto;
+}
+
+button {
+  border-radius: .5rem;
+  background-color: #2A2A2A;
+  color: #FFFFFF;
+  grid-column: span 2;
+  width: 10rem;
+  margin-left: auto;
+}
+
+button:hover {
+  background-color: green;
+  cursor: pointer;
+}
+
+#show-page {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 1rem;
+}
+
+#show-page div:nth-child(even) {
+  font-weight: bold;
+}
+
+
+#add-destination-form {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 1rem;
+}
+
+#add-destination-form button {
+  width: 8rem;
+  grid-column-start: 2;
+  margin-left: 0;
+}
+
+#add-destination-form input,
+#add-destination-form select {
+  margin-right: auto;
 }
