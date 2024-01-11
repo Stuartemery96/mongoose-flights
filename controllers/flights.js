@@ -1,4 +1,5 @@
 const Flight = require('../models/flight');
+const Ticket = require('../models/ticket');
 
 module.exports = {
   index,
@@ -37,11 +38,12 @@ async function create(req, res) {
 
 async function show(req, res) {
   const flight = await Flight.findById(req.params.id);
+  const tickets = await Ticket.find({ flight: flight._id });
   const airports = ["DEN", "DFW", "JFK", "LAX", "SEA", "SFO"].filter(airport => {
     if (flight.airport.includes(airport) || flight.destinations.some((destinations) => destinations.airport === airport)) {
       return false;
     }
     return true;
   });
-  res.render('flights/show', { title: 'Flight Details', flight, airports });
+  res.render('flights/show', { title: 'Flight Details', flight, airports, tickets });
 }
